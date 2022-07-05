@@ -9,7 +9,7 @@
     "@types/react-dom": "^17.0.12",
     "antd": "^4.15.3",
     "d3": "^6.7.0",
-    "geostyler": "^7.2.0",
+    "geostyler": "^8.1.1",
     "geostyler-geojson-parser": "^1.0.1",
     "geostyler-legend": "^2.1.0",
     "geostyler-shapefile-parser": "^1.0.0",
@@ -44,11 +44,11 @@
     "stream-browserify": "3.0.0",
     "style-loader": "3.3.1",
     "timers-browserify": "2.0.12",
-    "ts-loader": "9.3.0",
+    "ts-loader": "9.3.1",
     "tslib": "2.4.0",
     "url-loader": "4.1.1",
     "webpack": "5.73.0",
-    "webpack-cli": "4.9.2",
+    "webpack-cli": "4.10.0",
     "webpack-dev-server": "4.9.2"
   }
 }
