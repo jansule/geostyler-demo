@@ -26,6 +26,7 @@ import GeoJsonParser from 'geostyler-geojson-parser';
 import SldStyleParser from 'geostyler-sld-parser';
 import ShapefileParser from 'geostyler-shapefile-parser';
 import WfsParser from 'geostyler-wfs-parser';
+import QGISStyleParser from 'geostyler-qgis-parser';
 
 import {
   CodeEditor,
@@ -94,6 +95,8 @@ class App extends React.Component<AppProps, AppState> {
   private _shapefileParser = new ShapefileParser();
 
   private _wfsParser = new WfsParser();
+
+  private _qgisStyleParser = new QGISStyleParser();
 
   constructor(props: AppProps) {
     super(props);
@@ -366,7 +369,8 @@ class App extends React.Component<AppProps, AppState> {
                 <StyleLoader
                   parsers={[
                     this._sldStyleParser,
-                    this._sldStyleParserSE
+                    this._sldStyleParserSE,
+                    this._qgisStyleParser
                   ]}
                   onStyleRead={(style: GsStyle) => {
                     notification.success({
@@ -425,7 +429,8 @@ class App extends React.Component<AppProps, AppState> {
                     style={style}
                     parsers={[
                       this._sldStyleParser,
-                      this._sldStyleParserSE
+                      this._sldStyleParserSE,
+                      this._qgisStyleParser
                     ]}
                     defaultParser={this._sldStyleParser}
                     onStyleChange={(style: GsStyle) => {
